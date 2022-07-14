@@ -1,0 +1,78 @@
+<article class="card mb-2">
+    <div class="card-body">
+        <p>{{this.origin}}</p>
+        <p>{{this.shortURL}}</p>
+        {{!-- <button class="btn btn-primary" data-short="{{url.shortURL}}">
+            Copiar
+        </button> --}}
+        <a href="/update1/{{this._id}}" class="btn btn-warning">Editar</a>
+        <a href="/delete/{{this._id}}" class="btn btn-danger">Eliminar</a>
+    </div>
+</article>
+<script>
+    const urlContainer = document.getElementsByTagName('article');
+    setTimeout(()=>{
+        const arr = Array.from(urlContainer)
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        while('#0275d8'== randomColor){
+        randomColor = Math.floor(Math.random()*16777215).toString(16);
+        }
+        for(let i = 0 ; i<arr.length;i++){
+            arr[i].style.backgroundColor = "#" + randomColor;
+            randomColor = Math.floor(Math.random()*16777215).toString(16);
+            while('#0275d8'== randomColor){
+            randomColor = Math.floor(Math.random()*16777215).toString(16);
+            }
+        }
+    },0599)
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{!-- const urlContainer = document.getElementsByClassName('urlContainer');
+    console.log(urlContainer[0])
+    const arr = Array.from(urlContainer);
+    let cont = 0;
+    
+    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+    while('#0275d8'== randomColor){
+        randomColor = Math.floor(Math.random()*16777215).toString(16);
+    }
+    console.log('CAC')
+    console.log(arr)
+    for(let i=0;i<arr.length;i++){
+        cont++;
+        console.log(arr[i])
+        arr[i].style.backgroundColor = "#" + randomColor;
+        randomColor = Math.floor(Math.random()*16777215).toString(16);
+        while('#0275d8'== randomColor){
+        randomColor = Math.floor(Math.random()*16777215).toString(16);
+        }
+    } --}}
+    console.log(cont)
+</script>

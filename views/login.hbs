@@ -1,0 +1,32 @@
+<h1 class="text-center my-5">Iniciar sesión</h1>
+
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    {{#if mensajes}}
+      <ul>
+        {{#each mensajes}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+
+    {{/if}}
+    <form action="/auth/login" method="post">
+     <input type="hidden" name="_csrf" value="{{csrfToken}}">
+      <input
+        class="form-control mb-2"
+        name="email"
+        placeholder="Ingrese email"
+        type="text"
+        value=""
+      />
+      <input
+        class="form-control mb-2"
+        name="password"
+        placeholder="Ingrese contraseña"
+        type="password"
+        value=""
+      />
+      <button type="submit" class="btn btn-primary">Seguir</button>
+    </form>
+  </div>
+</div>

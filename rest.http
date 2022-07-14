@@ -1,0 +1,33 @@
+###
+GET http://localhost:7980
+
+###
+POST http://localhost:7980
+Content-Type: application/json
+
+# {
+#     "origin":"www.yotube.com",
+#     "shortUrl":"ytb"
+# }
+{
+    "origin":"www..com",
+    "shortUrl":"google"
+}
+###
+GET http://localhost:7980/primero
+
+###
+GET http://localhost:7980/segundo
+
+###
+GET http://localhost:7980/delete/
+
+###
+POST http://localhost:7980/auth/register
+Content-Type: application/json
+
+{
+    "username":"JuanP",
+    "email":"juanp@gmail.com",
+    "password":"juanpipi"
+}
