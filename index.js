@@ -24,7 +24,7 @@ app.engine('.hbs',hbs.engine);
 app.set('view engine','.hbs');
 app.set('views', './views');
 console.log("aquiiiii");
-console.log(process.env.PATH);
+console.log(process.env.path);
 app.use(cors({
   origin:process.env.path,
   credentials: true
