@@ -23,7 +23,10 @@ const hbs = create({
 app.engine('.hbs',hbs.engine);
 app.set('view engine','.hbs');
 app.set('views', './views');
-app.use(cors({origin:process.env.PATH}));
+app.use(cors({
+  origin:process.env.PATH,
+  credentials: true
+}));
 app.set('trust proxy',1)
 app.use(session({
   secret: 'keyboard cat',
@@ -32,7 +35,7 @@ app.use(session({
   name:'secret_name',
   store:new MongoStore({mongoUrl:process.env.URI,ttl:60*60*10}),
   cookie:{
-    secure:!(process.env.MODE=='production')
+    secure:(process.env.MODE=='production')
   }
 }))
 app.use(flash());
