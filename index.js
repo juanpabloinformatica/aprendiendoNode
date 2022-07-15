@@ -60,7 +60,7 @@ app.use(express.static('./public'));
 app.use('/',require('./routes/home'));
 app.use('/auth',require('./routes/auth'));
 
-const PORT = 7980
+const PORT = process.env.PORT||7980
 app.listen(PORT,()=>{
     console.log('listening');
 })
