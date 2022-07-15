@@ -26,7 +26,7 @@ app.set('views', './views');
 console.log("aquiiiii");
 console.log(process.env.PATH);
 app.use(cors({
-  origin:process.env.PATH,
+  origin:process.env.path,
   credentials: true
 }));
 app.set('trust proxy',1)
