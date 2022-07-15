@@ -23,6 +23,7 @@ const hbs = create({
 app.engine('.hbs',hbs.engine);
 app.set('view engine','.hbs');
 app.set('views', './views');
+console.log(process.env.PATH);
 app.use(cors({
   origin:process.env.PATH,
   credentials: true
